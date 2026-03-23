@@ -13,10 +13,10 @@ const MODULE_OPTIONS = [
   { id: 'koc2', label: 'KOC Review (Viral Hook)' },
   { id: 'nonface', label: 'Review (Non-face)' },
   { id: 'reviewdoithoai', label: 'Review Đối Thoại' },
-  { id: 'nonface2', label: 'Review GIày Dép' },
+  { id: 'nonface2', label: 'Review Cận Chân' },
   { id: 'personification', label: 'Nhân Hóa Review' },
   { id: 'personification2', label: 'Nhân Hóa (Kiến thức)' },
-  { id: 'videopov', label: 'StoryTelling (POV)' },
+  { id: 'videopov', label: 'Kiến Thức - Dịch Vụ' },
   { id: 'carousel', label: 'Ảnh Cuộn Tiktok' },
 ];
 
