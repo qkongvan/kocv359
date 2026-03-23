@@ -384,14 +384,19 @@ const ChatbotStudioModule: React.FC<ChatbotStudioModuleProps> = ({ onTabChange }
               </select>
 
               <div className="flex-1 relative">
-                <input 
-                  type="text" 
+                <textarea 
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                      e.preventDefault();
+                      handleSend();
+                    }
+                  }}
                   placeholder={state.mode === 'script' ? "Nhập yêu cầu kịch bản..." : "Mô tả hình ảnh muốn tạo..."}
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all resize-none min-h-[46px] max-h-32"
                   disabled={state.isProcessing}
+                  rows={1}
                 />
               </div>
 
